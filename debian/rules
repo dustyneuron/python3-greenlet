@@ -6,7 +6,7 @@ include /usr/share/dpkg/buildflags.mk
 PYVERSIONS := $(shell pyversions -sv)
 
 %:
-	dh $@ --with python2
+	dh $@ --with python3
 
 override_dh_auto_clean:
 	rm -rf build/
@@ -29,6 +29,6 @@ ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
 endif
 
 override_dh_installdocs:
-	dh_installdocs --link-doc=python-greenlet
+	dh_installdocs --link-doc=python3-greenlet
 
 .PHONY: override_dh_auto_clean override_dh_auto_build override_dh_auto_test override_dh_installdocs
