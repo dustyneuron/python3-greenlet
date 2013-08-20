@@ -10,7 +10,7 @@ Homepage: http://pypi.python.org/pypi/greenlet
 Package: python3-greenlet-dbg
 Section: debug
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, python-greenlet (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, python3-greenlet (= ${binary:Version})
 Recommends: python3-dbg
 Description: Lightweight in-process concurrent programming - debugging symbols
  The greenlet package is a spin-off of Stackless, a version of CPython that
