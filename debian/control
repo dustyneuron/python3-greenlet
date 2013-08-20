@@ -8,42 +8,6 @@ Standards-Version: 3.9.3
 Section: python
 Homepage: http://pypi.python.org/pypi/greenlet
 
-Package: python3-greenlet-dbg
-Section: debug
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, python3-greenlet (= ${binary:Version})
-X-Python3-Version: >= 3.3
-Recommends: python3-dbg
-Description: Lightweight in-process concurrent programming - debugging symbols
- The greenlet package is a spin-off of Stackless, a version of CPython that
- supports micro-threads called "tasklets". Tasklets run pseudo-concurrently
- (typically in a single or a few OS-level threads) and are synchronized with
- data exchanges on "channels".
- .
- greenlet is the standalone package derived from the py lib, and is used by
- several non-blocking IO packages as a more flexible alternative to Python's
- built in coroutines.
- .
- This is the debugging symbols for greenlet.
-
-Package: python3-greenlet-doc
-Section: doc
-Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, libjs-jquery, libjs-underscore
-Suggests: python3-greenlet, python3-greenlet-dev
-X-Python3-Version: >= 3.3
-Description: Lightweight in-process concurrent programming - documentation
- The greenlet package is a spin-off of Stackless, a version of CPython that
- supports micro-threads called "tasklets". Tasklets run pseudo-concurrently
- (typically in a single or a few OS-level threads) and are synchronized with
- data exchanges on "channels".
- .
- greenlet is the standalone package derived from the py lib, and is used by
- several non-blocking IO packages as a more flexible alternative to Python's
- built in coroutines.
- .
- This is the documentation for greenlet.
-
 Package: python3-greenlet-dev
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, python3-greenlet (= ${binary:Version})
