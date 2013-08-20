@@ -23,7 +23,6 @@ override_dh_auto_build:
 	set -ex; for python in $(PYTHON3); do \
 	  $$python setup.py build; \
 	done
-	dh_auto_build
 	cd doc && PYTHONPATH=.. make html
 
 override_dh_auto_test: $(PYVERSIONS:%=test-%-stamp)
@@ -40,7 +39,6 @@ override_dh_auto_install:
 	set -ex; for python in $(PYTHON3); do \
 	  $$python setup.py install --install-layout=deb --root=debian/tmp; \
 	done
-	dh_auto_install
 
 override_dh_installdocs:
 	dh_installdocs --link-doc=python3-greenlet
