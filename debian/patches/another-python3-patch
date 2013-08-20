@@ -1,0 +1,58 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ python3-greenlet (0.4.0-1ubuntu2) raring; urgency=low
+ .
+   * No change rebuild for Python issue #17703, trashcan mechanism segfault
+     during interpreter finalization
+Author: Matthias Klose <doko@ubuntu.com>
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: http://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- python3-greenlet-0.4.0.orig/run-tests.py
++++ python3-greenlet-0.4.0/run-tests.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.3
+ 
+ import sys, os, getopt, struct, unittest
+ from distutils.spawn import spawn
+--- python3-greenlet-0.4.0.orig/make-win-release
++++ python3-greenlet-0.4.0/make-win-release
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.3
+ 
+ import sys, os, subprocess, struct, re
+ 
+--- python3-greenlet-0.4.0.orig/setup.py
++++ python3-greenlet-0.4.0/setup.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.3
+ 
+ import sys, os, glob, platform
+ 
+--- python3-greenlet-0.4.0.orig/tests/test_version.py
++++ python3-greenlet-0.4.0/tests/test_version.py
+@@ -1,4 +1,4 @@
+-#! /usr/bin/env python
++#! /usr/bin/env python3.3
+ 
+ import sys, os, re, unittest, greenlet
+ 

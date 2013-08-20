@@ -3,7 +3,7 @@
 DPKG_EXPORT_BUILDFLAGS = 1
 include /usr/share/dpkg/buildflags.mk
 
-PYVERSIONS := $(shell pyversions -sv)
+PYVERSIONS := $(shell py3versions -sv)
 
 %:
 	dh $@ --with python3
