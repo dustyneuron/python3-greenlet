@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3.3
 
 import sys, os, getopt, struct, unittest
 from distutils.spawn import spawn
