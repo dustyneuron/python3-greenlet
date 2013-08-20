@@ -58,9 +58,10 @@ Description: Lightweight in-process concurrent programming - development files
 
 Package: python3-greenlet
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${python3:Depends}
 Conflicts: python-codespeak-lib (<< 1.0)
 Suggests: python3-greenlet-doc, python3-greenlet-dev, python3-greenlet-dbg
+X-Python3-Version: >= 3.3
 Description: Lightweight in-process concurrent programming
  The greenlet package is a spin-off of Stackless, a version of CPython that
  supports micro-threads called "tasklets". Tasklets run pseudo-concurrently
